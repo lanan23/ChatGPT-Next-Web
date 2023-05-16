@@ -32,19 +32,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="version" content={buildConfig.commitId} />
-        <link rel="manifest" href="/site.webmanifest"></link>
-        <script src="/serviceWorkerRegister.js" defer></script>
-                <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?e54a6dedbac5d25e245b41405bb48fdf";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-      </head>
+  <meta name="version" content={buildConfig.commitId} />
+  <link rel="manifest" href="/site.webmanifest"></link>
+  <script src="/serviceWorkerRegister.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7R6HQ5JX5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K7R6HQ5JX5');
+  </script>
+</head>
+
       <body>{children}</body>
     </html>
   );
